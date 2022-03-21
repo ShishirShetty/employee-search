@@ -18,7 +18,7 @@ public class EmployeeController {
    @PostMapping("/search")
     public EmployeeDTO search(@RequestBody  EmployeeSearchCriteria searchCriteria){
         System.out.println("I am in search controller for employee");
-       return employeeService.search(searchCriteria);
+       return employeeService.findUsingBean(searchCriteria);
     }
 /*
     @GetMapping("/find")
